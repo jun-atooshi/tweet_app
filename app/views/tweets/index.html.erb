@@ -1,2 +1,12 @@
-<h1>Tweets#index</h1>
-<p>Find me in app/views/tweets/index.html.erb</p>
+<p><%= notice %></p>
+
+<h1>メッセージ一覧</h1>
+
+<% @tweets.each do | tweet | %>
+    <p>メッセージ： <%= tweet.content %></p>
+    <%= link_to 'メッセージを編集する', edit_tweet_path(tweet.id) %>
+    <%= link_to 'データを削除する', tweet_path(tweet.id), method: :delete, data:{confirm: '本当に削除していいですか？'} %>
+<% end %>
+
+<br>
+<%= link_to "メッセージを入力する", new_tweet_path %>
