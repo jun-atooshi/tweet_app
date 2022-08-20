@@ -21,9 +21,12 @@ class TweetsController < ApplicationController
 
   def create
     @tweet = Tweet.new(tweet_params)
+    @tweet.user_id = current_user.id
     if @tweet.save
+      # 一覧画面へ遷移して"入力設定が完了しました！"とメッセージを表示します。
       redirect_to tweets_path, notice: "入力設定が完了しました！"
     else
+      # 入力フォームを再描画します。
       render 'new'
     end
   end
