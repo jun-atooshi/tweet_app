@@ -1,0 +1,9 @@
+<h3>以下の内容で、送信する。</h3>
+ 
+<%= form_for(@tweet) do |f| %>
+   <%= f.hidden_field :content %>
+ 
+   <p>メッセージ: <%= @tweet.content %></p>
+ 
+   <%= f.submit "送信する" %>
+<% end %>
