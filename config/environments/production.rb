@@ -118,7 +118,7 @@ Rails.application.configure do
   # config.active_record.database_resolver = ActiveRecord::Middleware::DatabaseSelector::Resolver
   # config.active_record.database_resolver_context = ActiveRecord::Middleware::DatabaseSelector::Resolver::Session
 
-  config.action_mailer.default_url_options = { host: 'evening-journey-49567' }
+  config.action_mailer.default_url_options = { host: 'evening-journey-49567.herokuapp.com' }
 
   ActionMailer::Base.delivery_method = :smtp
   ActionMailer::Base.smtp_settings =
