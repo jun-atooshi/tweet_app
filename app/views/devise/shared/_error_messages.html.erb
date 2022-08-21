@@ -1,4 +1,6 @@
-<%= p resource.errors %>
+<%= p resource.errors.count %>
+<%= p resource.class.model_name.human.downcase %>
+<%= p resource.errors.full_messages %>
 
 <% if resource.errors.any? %>
   <div id="error_explanation">
